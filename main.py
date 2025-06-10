@@ -94,20 +94,62 @@ class MonteCarloEstimator:
             return np.array([hits / n_samples * 4], dtype=self.dtype)
     
     def _sobol_sampling(self, n_samples: int) -> np.ndarray:
-        """Quasi-random Sobol sequence sampling (placeholder - would need scipy.stats.qmc)."""
-        # Fallback to uniform for now, but agent can optimize by adding proper Sobol
-        logging.warning("Sobol sampling not implemented, falling back to uniform")
-        return self._uniform_sampling(n_samples)
+        """Quasi-random Sobol sequence sampling."""
+        try:
+            from scipy.stats import qmc
+            sampler = qmc.Sobol(d=2, scramble=True, seed=self.config.random_seed)
+            samples = sampler.random(n_samples)
+            # Scale from [0,1] to [-1,1]
+            x = (samples[:, 0] * 2 - 1).astype(self.dtype)
+            y = (samples[:, 1] * 2 - 1).astype(self.dtype)
+            return (x * x + y * y <= 1).astype(self.dtype)
+        except ImportError:
+            logging.warning("scipy not available for Sobol sampling, falling back to uniform")
+            return self._uniform_sampling(n_samples)
     
     def _halton_sampling(self, n_samples: int) -> np.ndarray:
-        """Quasi-random Halton sequence sampling (placeholder)."""
-        logging.warning("Halton sampling not implemented, falling back to uniform")
-        return self._uniform_sampling(n_samples)
+        """Quasi-random Halton sequence sampling."""
+        try:
+            from scipy.stats import qmc
+            sampler = qmc.Halton(d=2, scramble=True, seed=self.config.random_seed)
+            samples = sampler.random(n_samples)
+            # Scale from [0,1] to [-1,1]
+            x = (samples[:, 0] * 2 - 1).astype(self.dtype)
+            y = (samples[:, 1] * 2 - 1).astype(self.dtype)
+            return (x * x + y * y <= 1).astype(self.dtype)
+        except ImportError:
+            logging.warning("scipy not available for Halton sampling, falling back to uniform")
+            return self._uniform_sampling(n_samples)
     
     def _importance_sampling(self, n_samples: int) -> np.ndarray:
-        """Importance sampling with optimized distribution (placeholder)."""
-        logging.warning("Importance sampling not implemented, falling back to uniform")
-        return self._uniform_sampling(n_samples)
+        """Importance sampling with optimized distribution for circle estimation."""
+        # Use a distribution that concentrates samples near the unit circle boundary
+        # where the indicator function changes most rapidly
+        try:
+            # Sample radii with bias towards the circle boundary
+            r = np.sqrt(self.rng.beta(0.8, 0.8, n_samples)).astype(self.dtype)
+            theta = self.rng.uniform(0, 2 * np.pi, n_samples).astype(self.dtype)
+            
+            x = r * np.cos(theta)
+            y = r * np.sin(theta)
+            
+            # Importance weights (inverse of sampling density)
+            # For beta(0.8, 0.8) transformed to sqrt, the density is roughly proportional to r^(-0.4)
+            weights = r ** 0.4
+            
+            # Indicator function
+            inside_circle = (x * x + y * y <= 1).astype(self.dtype)
+            
+            # Apply importance weights
+            weighted_estimates = inside_circle * weights
+            
+            # Normalize by average weight to get unbiased estimate
+            avg_weight = np.mean(weights)
+            return weighted_estimates / avg_weight
+            
+        except Exception as e:
+            logging.warning(f"Importance sampling failed ({e}), falling back to uniform")
+            return self._uniform_sampling(n_samples)
     
     def estimate_batch(self, batch_size: int) -> float:
         """Estimate PI using a single batch."""

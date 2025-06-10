@@ -16,6 +16,7 @@ import numpy as np
 from typing import Dict, List, Any, Tuple
 from pathlib import Path
 import time
+import argparse
 
 
 class HyperparameterOptimizer:
@@ -34,7 +35,7 @@ class HyperparameterOptimizer:
             'batch_size': [1000, 5000, 10000, 50000, 100000],
             'total_samples': [100000, 500000, 1000000, 5000000],
             'precision': ['float32', 'float64'],
-            'algorithm': ['uniform'],  # Start with uniform, agent can expand
+            'algorithm': ['uniform', 'sobol', 'halton', 'importance'],
         }
     
     def grid_search_optimization(self, max_evaluations: int = 50) -> Dict[str, Any]:
@@ -211,11 +212,18 @@ def main():
     """Main optimization routine."""
     print("HPC Monte Carlo Experiment Optimizer")
     print("=====================================")
-    
+
+    parser = argparse.ArgumentParser(
+        description="HPC Monte Carlo Experiment Optimizer"
+    )
+    parser.add_argument("--method", choices=["grid", "bayesian", "both"],
+                       default="both", help="Optimization method to use")
+    args = parser.parse_args()
+
     optimizer = HyperparameterOptimizer()
-    
+
     # Choose optimization strategy
-    optimization_method = input("Choose optimization method (grid/bayesian/both): ").strip().lower()
+    optimization_method = args.method
     
     if optimization_method in ['grid', 'both']:
         print("\n--- Grid Search Optimization ---")
