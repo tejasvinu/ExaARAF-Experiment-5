@@ -23,41 +23,58 @@ from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 from typing import Dict, Any, List, Tuple
 import logging
 import sys
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from pathlib import Path
 
 
-@dataclass
 class ExperimentConfig:
     """Configuration for the Monte Carlo PI estimation experiment."""
     
-    # Core algorithm parameters
-    total_samples = 1_000_000
-    algorithm = "uniform"  # uniform, sobol, halton, importance
-    
-    # Parallelization parameters
-    num_workers = mp.cpu_count()
-    parallel_strategy = "multiprocessing"  # thread, multiprocessing, vectorized
-    batch_size = 10_000
-    
-    # Performance optimization parameters
-    use_numpy_vectorization = True
-    precision = "float64"  # float32, float64
-    memory_efficient = False
-    
-    # Convergence and accuracy parameters
-    target_accuracy = 1e-4
-    max_iterations = 100
-    convergence_window = 10
-    
-    # Output and logging
-    output_dir = "results"
-    log_level = "INFO"
-    save_intermediate = True
-    
-    # Experimental parameters for optimization
-    random_seed = 42
-    profile_performance = True
+    def __init__(self, 
+                 total_samples=1_000_000,
+                 algorithm="uniform",
+                 num_workers=None,
+                 parallel_strategy="multiprocessing",
+                 batch_size=10_000,
+                 use_numpy_vectorization=True,
+                 precision="float64",
+                 memory_efficient=False,
+                 target_accuracy=1e-4,
+                 max_iterations=100,
+                 convergence_window=10,
+                 output_dir="results",
+                 log_level="INFO",
+                 save_intermediate=True,
+                 random_seed=42,
+                 profile_performance=True):
+        
+        # Core algorithm parameters
+        self.total_samples = total_samples
+        self.algorithm = algorithm  # uniform, sobol, halton, importance
+        
+        # Parallelization parameters
+        self.num_workers = num_workers if num_workers is not None else mp.cpu_count()
+        self.parallel_strategy = parallel_strategy  # thread, multiprocessing, vectorized
+        self.batch_size = batch_size
+        
+        # Performance optimization parameters
+        self.use_numpy_vectorization = use_numpy_vectorization
+        self.precision = precision  # float32, float64
+        self.memory_efficient = memory_efficient
+        
+        # Convergence and accuracy parameters
+        self.target_accuracy = target_accuracy
+        self.max_iterations = max_iterations
+        self.convergence_window = convergence_window
+        
+        # Output and logging
+        self.output_dir = output_dir
+        self.log_level = log_level
+        self.save_intermediate = save_intermediate
+        
+        # Experimental parameters for optimization
+        self.random_seed = random_seed
+        self.profile_performance = profile_performance
 
 
 class MonteCarloEstimator:
@@ -255,9 +272,30 @@ class ExperimentRunner:
         """Create output directory for results."""
         Path(self.config.output_dir).mkdir(parents=True, exist_ok=True)
     
+    def _config_to_dict(self, config):
+        """Convert config object to dictionary."""
+        return {
+            'total_samples': config.total_samples,
+            'algorithm': config.algorithm,
+            'num_workers': config.num_workers,
+            'parallel_strategy': config.parallel_strategy,
+            'batch_size': config.batch_size,
+            'use_numpy_vectorization': config.use_numpy_vectorization,
+            'precision': config.precision,
+            'memory_efficient': config.memory_efficient,
+            'target_accuracy': config.target_accuracy,
+            'max_iterations': config.max_iterations,
+            'convergence_window': config.convergence_window,
+            'output_dir': config.output_dir,
+            'log_level': config.log_level,
+            'save_intermediate': config.save_intermediate,
+            'random_seed': config.random_seed,
+            'profile_performance': config.profile_performance
+        }
+    
     def run_single_experiment(self) -> Dict[str, Any]:
         """Run a single experiment iteration."""
-        logging.info(f"Starting experiment with config: {asdict(self.config)}")
+        logging.info(f"Starting experiment with config: {self._config_to_dict(self.config)}")
         
         # Initialize estimator
         parallel_estimator = ParallelEstimator(self.config)
@@ -273,7 +311,7 @@ class ExperimentRunner:
         
         result = {
             "timestamp": time.time(),
-            "config": asdict(self.config),
+            "config": self._config_to_dict(self.config),
             "pi_estimate": float(pi_estimate),
             "actual_pi": float(np.pi),
             "absolute_error": float(error),
@@ -328,7 +366,7 @@ class ExperimentRunner:
             "best_result": best_result,
             "best_score": best_score,
             "optimization_progress": self.results_history,
-            "final_config": asdict(self.config)
+            "final_config": self._config_to_dict(self.config)
         }
         
         self.save_summary(summary)
