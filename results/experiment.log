@@ -1,0 +1,8 @@
+2025-06-10 12:05:57,510 - INFO - Starting experiment with config: {'total_samples': 10000, 'algorithm': 'uniform', 'num_workers': 24, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:05:58,240 - INFO - PI estimate: 3.15384615 (error: 0.01225350)
+2025-06-10 12:05:58,240 - INFO - Execution time: 0.7285s
+2025-06-10 12:05:58,241 - INFO - Samples/sec: 13727.12
+2025-06-10 12:06:04,109 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 4, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:06:04,386 - INFO - PI estimate: 3.13904000 (error: 0.00255265)
+2025-06-10 12:06:04,387 - INFO - Execution time: 0.2766s
+2025-06-10 12:06:04,387 - INFO - Samples/sec: 1807550.79

@@ -1,0 +1,106 @@
+{
+  "baseline_config": {
+    "description": "Basic configuration for initial baseline evaluation",
+    "total_samples": 1000000,
+    "algorithm": "uniform",
+    "num_workers": 4,
+    "parallel_strategy": "multiprocessing",
+    "batch_size": 10000,
+    "precision": "float64",
+    "target_accuracy": 1e-4,
+    "max_iterations": 50
+  },
+  
+  "high_performance_config": {
+    "description": "Configuration optimized for maximum performance",
+    "total_samples": 5000000,
+    "algorithm": "uniform",
+    "num_workers": 8,
+    "parallel_strategy": "multiprocessing",
+    "batch_size": 50000,
+    "precision": "float64",
+    "use_numpy_vectorization": true,
+    "target_accuracy": 1e-4,
+    "max_iterations": 20
+  },
+  
+  "memory_efficient_config": {
+    "description": "Configuration optimized for memory efficiency",
+    "total_samples": 1000000,
+    "algorithm": "uniform",
+    "num_workers": 2,
+    "parallel_strategy": "thread",
+    "batch_size": 1000,
+    "precision": "float32",
+    "memory_efficient": true,
+    "target_accuracy": 1e-3,
+    "max_iterations": 100
+  },
+  
+  "high_accuracy_config": {
+    "description": "Configuration optimized for high accuracy",
+    "total_samples": 10000000,
+    "algorithm": "uniform",
+    "num_workers": 8,
+    "parallel_strategy": "multiprocessing",
+    "batch_size": 100000,
+    "precision": "float64",
+    "target_accuracy": 1e-6,
+    "max_iterations": 200
+  },
+  
+  "quick_test_config": {
+    "description": "Fast configuration for testing and development",
+    "total_samples": 100000,
+    "algorithm": "uniform",
+    "num_workers": 2,
+    "parallel_strategy": "vectorized",
+    "batch_size": 10000,
+    "precision": "float32",
+    "target_accuracy": 1e-2,
+    "max_iterations": 10
+  },
+  
+  "optimization_search_space": {
+    "description": "Parameter ranges for hyperparameter optimization",
+    "total_samples": [100000, 500000, 1000000, 5000000, 10000000],
+    "algorithm": ["uniform"],
+    "num_workers": [1, 2, 4, 8, 16],
+    "parallel_strategy": ["thread", "multiprocessing", "vectorized"],
+    "batch_size": [1000, 5000, 10000, 50000, 100000],
+    "precision": ["float32", "float64"],
+    "target_accuracy": [1e-3, 1e-4, 1e-5, 1e-6]
+  },
+  
+  "agent_improvement_opportunities": {
+    "description": "Areas where an agent can optimize the experiment",
+    "algorithmic_improvements": [
+      "Implement Sobol sequence sampling",
+      "Implement Halton sequence sampling", 
+      "Implement importance sampling",
+      "Add adaptive sampling strategies",
+      "Implement variance reduction techniques"
+    ],
+    "performance_optimizations": [
+      "Optimize memory usage patterns",
+      "Implement cache-friendly algorithms",
+      "Add SIMD optimizations",
+      "Optimize for specific CPU architectures",
+      "Implement GPU acceleration"
+    ],
+    "parallelization_improvements": [
+      "Dynamic load balancing",
+      "Adaptive thread pool sizing",
+      "NUMA-aware scheduling",
+      "Lock-free algorithms",
+      "Asynchronous processing"
+    ],
+    "convergence_optimizations": [
+      "Adaptive accuracy targets",
+      "Early stopping criteria",
+      "Progressive sampling",
+      "Confidence interval estimation",
+      "Adaptive convergence windows"
+    ]
+  }
+} 
