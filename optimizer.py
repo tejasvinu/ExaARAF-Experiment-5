@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Example Optimization Agent for HPC Monte Carlo Experiment
 =========================================================

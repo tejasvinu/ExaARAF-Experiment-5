@@ -1,0 +1,894 @@
+{
+  "best_config": {
+    "num_workers": 8,
+    "parallel_strategy": "vectorized",
+    "batch_size": 50000,
+    "total_samples": 100000,
+    "precision": "float64",
+    "algorithm": "uniform"
+  },
+  "best_score": 0.002477910566872045,
+  "total_evaluations": 20,
+  "optimization_history": [
+    {
+      "config": {
+        "num_workers": 1,
+        "parallel_strategy": "thread",
+        "batch_size": 1000,
+        "total_samples": 100000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.0037192221477380626,
+      "result": {
+        "timestamp": 1749537854.2431254,
+        "config": {
+          "total_samples": 100000,
+          "algorithm": "uniform",
+          "num_workers": 1,
+          "parallel_strategy": "thread",
+          "batch_size": 1000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.14308,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.001487346410206758,
+        "relative_error": 0.00047343706654878276,
+        "total_execution_time": 0.0035510999150574207,
+        "performance_metrics": {
+          "execution_time": 0.0035451999865472317,
+          "samples_per_second": 28207153.4411216,
+          "parallel_efficiency": 1.0
+        },
+        "converged": false
+      },
+      "timestamp": 1749537854.2668517
+    },
+    {
+      "config": {
+        "num_workers": 16,
+        "parallel_strategy": "thread",
+        "batch_size": 10000,
+        "total_samples": 500000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.007267942250087774,
+      "result": {
+        "timestamp": 1749537854.4689944,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 16,
+          "parallel_strategy": "thread",
+          "batch_size": 10000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.1422,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.000607346410206766,
+        "relative_error": 0.00019332436670704955,
+        "total_execution_time": 0.0071301000425592065,
+        "performance_metrics": {
+          "execution_time": 0.007124299998395145,
+          "samples_per_second": 70182333.71876991,
+          "parallel_efficiency": 0.0625
+        },
+        "converged": false
+      },
+      "timestamp": 1749537854.491034
+    },
+    {
+      "config": {
+        "num_workers": 16,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 50000,
+        "total_samples": 500000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.6060459890339187,
+      "result": {
+        "timestamp": 1749537855.2432415,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 16,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 50000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.138688,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0029046535897929715,
+        "relative_error": 0.0009245799535703398,
+        "total_execution_time": 0.5547545000445098,
+        "performance_metrics": {
+          "execution_time": 0.5547454000916332,
+          "samples_per_second": 901314.3685687338,
+          "parallel_efficiency": 0.0625
+        },
+        "converged": false
+      },
+      "timestamp": 1749537855.2815762
+    },
+    {
+      "config": {
+        "num_workers": 2,
+        "parallel_strategy": "vectorized",
+        "batch_size": 100000,
+        "total_samples": 5000000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.07121779288876834,
+      "result": {
+        "timestamp": 1749537855.5604913,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 2,
+          "parallel_strategy": "vectorized",
+          "batch_size": 100000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.142124,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0005313464102068011,
+        "relative_error": 0.0001691328153570926,
+        "total_execution_time": 0.07003329996950924,
+        "performance_metrics": {
+          "execution_time": 0.07000539998989552,
+          "samples_per_second": 71423061.65983899,
+          "parallel_efficiency": 0.5
+        },
+        "converged": false
+      },
+      "timestamp": 1749537855.5812232
+    },
+    {
+      "config": {
+        "num_workers": 16,
+        "parallel_strategy": "vectorized",
+        "batch_size": 50000,
+        "total_samples": 500000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.008441756352782572,
+      "result": {
+        "timestamp": 1749537855.7580218,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 16,
+          "parallel_strategy": "vectorized",
+          "batch_size": 50000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.143024,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.001431346410206924,
+        "relative_error": 0.00045561171292254335,
+        "total_execution_time": 0.008073900011368096,
+        "performance_metrics": {
+          "execution_time": 0.00806869997177273,
+          "samples_per_second": 61967851.29564654,
+          "parallel_efficiency": 0.0625
+        },
+        "converged": false
+      },
+      "timestamp": 1749537855.7808676
+    },
+    {
+      "config": {
+        "num_workers": 2,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 10000,
+        "total_samples": 500000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.27920146482424224,
+      "result": {
+        "timestamp": 1749537856.1829426,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 2,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 10000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.147776,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.006183346410206791,
+        "relative_error": 0.0019682202920678744,
+        "total_execution_time": 0.23328569997102022,
+        "performance_metrics": {
+          "execution_time": 0.23328030004631728,
+          "samples_per_second": 2143344.2939704987,
+          "parallel_efficiency": 0.5
+        },
+        "converged": false
+      },
+      "timestamp": 1749537856.2029927
+    },
+    {
+      "config": {
+        "num_workers": 1,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 1000,
+        "total_samples": 100000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.19846932821496527,
+      "result": {
+        "timestamp": 1749537856.5568786,
+        "config": {
+          "total_samples": 100000,
+          "algorithm": "uniform",
+          "num_workers": 1,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 1000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.14308,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.001487346410206758,
+        "relative_error": 0.00047343706654878276,
+        "total_execution_time": 0.1894977999618277,
+        "performance_metrics": {
+          "execution_time": 0.1894919000333175,
+          "samples_per_second": 527727.0425934694,
+          "parallel_efficiency": 1.0
+        },
+        "converged": false
+      },
+      "timestamp": 1749537856.5781996
+    },
+    {
+      "config": {
+        "num_workers": 1,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 100000,
+        "total_samples": 5000000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.3143383694450207,
+      "result": {
+        "timestamp": 1749537857.045553,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 1,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 100000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.142124,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0005313464102068011,
+        "relative_error": 0.0001691328153570926,
+        "total_execution_time": 0.30911029991693795,
+        "performance_metrics": {
+          "execution_time": 0.3090973999351263,
+          "samples_per_second": 16176130.892881678,
+          "parallel_efficiency": 1.0
+        },
+        "converged": false
+      },
+      "timestamp": 1749537857.0700982
+    },
+    {
+      "config": {
+        "num_workers": 1,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 10000,
+        "total_samples": 500000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.23688861236286587,
+      "result": {
+        "timestamp": 1749537857.5134168,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 1,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 10000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.143024,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.001431346410206924,
+        "relative_error": 0.00045561171292254335,
+        "total_execution_time": 0.22656600002665073,
+        "performance_metrics": {
+          "execution_time": 0.2265429999679327,
+          "samples_per_second": 2207086.513689566,
+          "parallel_efficiency": 1.0
+        },
+        "converged": false
+      },
+      "timestamp": 1749537857.5374544
+    },
+    {
+      "config": {
+        "num_workers": 8,
+        "parallel_strategy": "vectorized",
+        "batch_size": 1000,
+        "total_samples": 5000000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.12353004938677296,
+      "result": {
+        "timestamp": 1749537857.8761895,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 8,
+          "parallel_strategy": "vectorized",
+          "batch_size": 1000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.142124,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0005313464102068011,
+        "relative_error": 0.0001691328153570926,
+        "total_execution_time": 0.12147550005465746,
+        "performance_metrics": {
+          "execution_time": 0.12145950004924089,
+          "samples_per_second": 41165985.3529197,
+          "parallel_efficiency": 0.125
+        },
+        "converged": false
+      },
+      "timestamp": 1749537857.9039586
+    },
+    {
+      "config": {
+        "num_workers": 2,
+        "parallel_strategy": "thread",
+        "batch_size": 10000,
+        "total_samples": 5000000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.10541770523938214,
+      "result": {
+        "timestamp": 1749537858.2191157,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 2,
+          "parallel_strategy": "thread",
+          "batch_size": 10000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.142124,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0005313464102068011,
+        "relative_error": 0.0001691328153570926,
+        "total_execution_time": 0.10366440005600452,
+        "performance_metrics": {
+          "execution_time": 0.10365479998290539,
+          "samples_per_second": 48237032.928765416,
+          "parallel_efficiency": 0.5
+        },
+        "converged": false
+      },
+      "timestamp": 1749537858.2523422
+    },
+    {
+      "config": {
+        "num_workers": 4,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 5000,
+        "total_samples": 5000000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.3084220015609031,
+      "result": {
+        "timestamp": 1749537858.769773,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 4,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 5000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.1423488,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0007561464102070481,
+        "relative_error": 0.00024068887777128737,
+        "total_execution_time": 0.3011731000151485,
+        "performance_metrics": {
+          "execution_time": 0.30115449998993427,
+          "samples_per_second": 16602773.659922462,
+          "parallel_efficiency": 0.25
+        },
+        "converged": false
+      },
+      "timestamp": 1749537858.7993948
+    },
+    {
+      "config": {
+        "num_workers": 16,
+        "parallel_strategy": "vectorized",
+        "batch_size": 100000,
+        "total_samples": 1000000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.02129059995058924,
+      "result": {
+        "timestamp": 1749537859.0073483,
+        "config": {
+          "total_samples": 1000000,
+          "algorithm": "uniform",
+          "num_workers": 16,
+          "parallel_strategy": "vectorized",
+          "batch_size": 100000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.14178,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.00018734641020667908,
+        "relative_error": 5.963421450982978e-05,
+        "total_execution_time": 0.02129059995058924,
+        "performance_metrics": {
+          "execution_time": 0.021249499986879528,
+          "samples_per_second": 47059930.85095878,
+          "parallel_efficiency": 0.0625
+        },
+        "converged": true
+      },
+      "timestamp": 1749537859.0276594
+    },
+    {
+      "config": {
+        "num_workers": 16,
+        "parallel_strategy": "thread",
+        "batch_size": 100000,
+        "total_samples": 5000000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.04184199997689575,
+      "result": {
+        "timestamp": 1749537859.2377582,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 16,
+          "parallel_strategy": "thread",
+          "batch_size": 100000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.141744,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.00015134641020697615,
+        "relative_error": 4.8175058607307875e-05,
+        "total_execution_time": 0.04184199997689575,
+        "performance_metrics": {
+          "execution_time": 0.04183160001412034,
+          "samples_per_second": 119526864.81779899,
+          "parallel_efficiency": 0.0625
+        },
+        "converged": true
+      },
+      "timestamp": 1749537859.260771
+    },
+    {
+      "config": {
+        "num_workers": 4,
+        "parallel_strategy": "vectorized",
+        "batch_size": 5000,
+        "total_samples": 500000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.010998989862472356,
+      "result": {
+        "timestamp": 1749537859.4357884,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 4,
+          "parallel_strategy": "vectorized",
+          "batch_size": 5000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.143024,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.001431346410206924,
+        "relative_error": 0.00045561171292254335,
+        "total_execution_time": 0.010519700008444488,
+        "performance_metrics": {
+          "execution_time": 0.010511299944482744,
+          "samples_per_second": 47567855.79717417,
+          "parallel_efficiency": 0.25
+        },
+        "converged": false
+      },
+      "timestamp": 1749537859.457303
+    },
+    {
+      "config": {
+        "num_workers": 4,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 10000,
+        "total_samples": 500000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.24406421331826184,
+      "result": {
+        "timestamp": 1749537859.8613164,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 4,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 10000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.13904,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0025526535897930636,
+        "relative_error": 0.0008125348736336748,
+        "total_execution_time": 0.225723399897106,
+        "performance_metrics": {
+          "execution_time": 0.22569529991596937,
+          "samples_per_second": 2215376.2182294424,
+          "parallel_efficiency": 0.25
+        },
+        "converged": false
+      },
+      "timestamp": 1749537859.8833563
+    },
+    {
+      "config": {
+        "num_workers": 8,
+        "parallel_strategy": "vectorized",
+        "batch_size": 50000,
+        "total_samples": 100000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.002477910566872045,
+      "result": {
+        "timestamp": 1749537860.0842977,
+        "config": {
+          "total_samples": 100000,
+          "algorithm": "uniform",
+          "num_workers": 8,
+          "parallel_strategy": "vectorized",
+          "batch_size": 50000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.14308,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.001487346410206758,
+        "relative_error": 0.00047343706654878276,
+        "total_execution_time": 0.002365900087170303,
+        "performance_metrics": {
+          "execution_time": 0.0023607000475749373,
+          "samples_per_second": 42360316.00148711,
+          "parallel_efficiency": 0.125
+        },
+        "converged": false
+      },
+      "timestamp": 1749537860.1043255
+    },
+    {
+      "config": {
+        "num_workers": 16,
+        "parallel_strategy": "thread",
+        "batch_size": 100000,
+        "total_samples": 500000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.005757200066000223,
+      "result": {
+        "timestamp": 1749537860.2808418,
+        "config": {
+          "total_samples": 500000,
+          "algorithm": "uniform",
+          "num_workers": 16,
+          "parallel_strategy": "thread",
+          "batch_size": 100000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.141872,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.00027934641020710416,
+        "relative_error": 8.891872403887382e-05,
+        "total_execution_time": 0.005757200066000223,
+        "performance_metrics": {
+          "execution_time": 0.005752200027927756,
+          "samples_per_second": 86923263.72039016,
+          "parallel_efficiency": 0.0625
+        },
+        "converged": true
+      },
+      "timestamp": 1749537860.3009138
+    },
+    {
+      "config": {
+        "num_workers": 8,
+        "parallel_strategy": "multiprocessing",
+        "batch_size": 50000,
+        "total_samples": 1000000,
+        "precision": "float64",
+        "algorithm": "uniform"
+      },
+      "score": 0.3581354831680243,
+      "result": {
+        "timestamp": 1749537860.792736,
+        "config": {
+          "total_samples": 1000000,
+          "algorithm": "uniform",
+          "num_workers": 8,
+          "parallel_strategy": "multiprocessing",
+          "batch_size": 50000,
+          "use_numpy_vectorization": true,
+          "precision": "float64",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.13904,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0025526535897930636,
+        "relative_error": 0.0008125348736336748,
+        "total_execution_time": 0.3312224999535829,
+        "performance_metrics": {
+          "execution_time": 0.3312166999094188,
+          "samples_per_second": 3019171.4375316226,
+          "parallel_efficiency": 0.125
+        },
+        "converged": false
+      },
+      "timestamp": 1749537860.8178377
+    },
+    {
+      "config": {
+        "num_workers": 2,
+        "parallel_strategy": "thread",
+        "batch_size": 1000,
+        "total_samples": 5000000,
+        "precision": "float32",
+        "algorithm": "uniform"
+      },
+      "score": 0.06095256185578548,
+      "result": {
+        "timestamp": 1749537861.0502357,
+        "config": {
+          "total_samples": 5000000,
+          "algorithm": "uniform",
+          "num_workers": 2,
+          "parallel_strategy": "thread",
+          "batch_size": 1000,
+          "use_numpy_vectorization": true,
+          "precision": "float32",
+          "memory_efficient": false,
+          "target_accuracy": 0.0001,
+          "max_iterations": 100,
+          "convergence_window": 10,
+          "output_dir": "results",
+          "log_level": "INFO",
+          "save_intermediate": true,
+          "random_seed": 42,
+          "profile_performance": true
+        },
+        "pi_estimate": 3.142124,
+        "actual_pi": 3.141592653589793,
+        "absolute_error": 0.0005313464102068011,
+        "relative_error": 0.0001691328153570926,
+        "total_execution_time": 0.05993880005553365,
+        "performance_metrics": {
+          "execution_time": 0.05993210000451654,
+          "samples_per_second": 83427745.72596647,
+          "parallel_efficiency": 0.5
+        },
+        "converged": false
+      },
+      "timestamp": 1749537861.068994
+    }
+  ]
+}

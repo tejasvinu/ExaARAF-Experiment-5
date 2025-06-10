@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
-HPC Optimization Experiment: Monte Carlo π Estimation
-=====================================================
+HPC Optimization Experiment: Monte Carlo PI Estimation
+======================================================
 
 This experiment evaluates an agent's ability to autonomously optimize
-a Monte Carlo π estimation task across multiple dimensions:
+a Monte Carlo PI estimation task across multiple dimensions:
 - Algorithm variants (uniform sampling, importance sampling, quasi-random)
 - Parallelization strategies (threading, multiprocessing, vectorization)
 - Memory management (batch sizes, chunk processing)
@@ -28,7 +29,7 @@ from pathlib import Path
 
 @dataclass
 class ExperimentConfig:
-    """Configuration for the Monte Carlo π estimation experiment."""
+    """Configuration for the Monte Carlo PI estimation experiment."""
     
     # Core algorithm parameters
     total_samples: int = 1_000_000
@@ -60,7 +61,7 @@ class ExperimentConfig:
 
 
 class MonteCarloEstimator:
-    """Monte Carlo π estimator with multiple algorithm variants."""
+    """Monte Carlo PI estimator with multiple algorithm variants."""
     
     def __init__(self, config: ExperimentConfig):
         self.config = config
@@ -109,7 +110,7 @@ class MonteCarloEstimator:
         return self._uniform_sampling(n_samples)
     
     def estimate_batch(self, batch_size: int) -> float:
-        """Estimate π using a single batch."""
+        """Estimate PI using a single batch."""
         algorithm = self.algorithms[self.config.algorithm]
         hits = algorithm(batch_size)
         
@@ -327,7 +328,7 @@ class ExperimentRunner:
 def create_config_from_args() -> ExperimentConfig:
     """Create configuration from command line arguments."""
     parser = argparse.ArgumentParser(
-        description="HPC Monte Carlo π Estimation Optimization Experiment"
+        description="HPC Monte Carlo PI Estimation Optimization Experiment"
     )
     
     # Core algorithm parameters

@@ -1,12 +1,12 @@
 [
   {
-    "timestamp": 1749537364.3865142,
+    "timestamp": 1749537861.2634099,
     "config": {
-      "total_samples": 500000,
+      "total_samples": 100000,
       "algorithm": "uniform",
-      "num_workers": 4,
-      "parallel_strategy": "multiprocessing",
-      "batch_size": 10000,
+      "num_workers": 8,
+      "parallel_strategy": "vectorized",
+      "batch_size": 50000,
       "use_numpy_vectorization": true,
       "precision": "float64",
       "memory_efficient": false,
@@ -19,15 +19,15 @@
       "random_seed": 42,
       "profile_performance": true
     },
-    "pi_estimate": 3.13904,
+    "pi_estimate": 3.14308,
     "actual_pi": 3.141592653589793,
-    "absolute_error": 0.0025526535897930636,
-    "relative_error": 0.0008125348736336748,
-    "total_execution_time": 0.27662439993582666,
+    "absolute_error": 0.001487346410206758,
+    "relative_error": 0.00047343706654878276,
+    "total_execution_time": 0.0021481000585481524,
     "performance_metrics": {
-      "execution_time": 0.2766173999989405,
-      "samples_per_second": 1807550.7903765817,
-      "parallel_efficiency": 0.25
+      "execution_time": 0.0021437000250443816,
+      "samples_per_second": 46648317.783142105,
+      "parallel_efficiency": 0.125
     },
     "converged": false
   }

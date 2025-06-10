@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 Test script for HPC Monte Carlo Experiment
 ==========================================
@@ -204,12 +205,12 @@ def test_accuracy_range():
                     pi_estimate = data[-1]['pi_estimate']
                     error = data[-1]['absolute_error']
                     
-                    # π should be between 3.0 and 3.2 with reasonable sample size
+                    # PI should be between 3.0 and 3.2 with reasonable sample size
                     if 3.0 <= pi_estimate <= 3.2:
-                        print(f"✓ Accuracy test passed (π ≈ {pi_estimate:.4f}, error: {error:.6f})")
+                        print(f"✓ Accuracy test passed (PI ≈ {pi_estimate:.4f}, error: {error:.6f})")
                         return True
                     else:
-                        print(f"✗ π estimate out of range: {pi_estimate}")
+                        print(f"✗ PI estimate out of range: {pi_estimate}")
                         return False
         
         print("✗ Could not verify accuracy")

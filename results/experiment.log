@@ -1,8 +1,88 @@
-2025-06-10 12:05:57,510 - INFO - Starting experiment with config: {'total_samples': 10000, 'algorithm': 'uniform', 'num_workers': 24, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
-2025-06-10 12:05:58,240 - INFO - PI estimate: 3.15384615 (error: 0.01225350)
-2025-06-10 12:05:58,240 - INFO - Execution time: 0.7285s
-2025-06-10 12:05:58,241 - INFO - Samples/sec: 13727.12
-2025-06-10 12:06:04,109 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 4, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
-2025-06-10 12:06:04,386 - INFO - PI estimate: 3.13904000 (error: 0.00255265)
-2025-06-10 12:06:04,387 - INFO - Execution time: 0.2766s
-2025-06-10 12:06:04,387 - INFO - Samples/sec: 1807550.79
+2025-06-10 12:14:07,615 - INFO - Starting experiment with config: {'total_samples': 10000, 'algorithm': 'uniform', 'num_workers': 24, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:08,355 - INFO - PI estimate: 3.15384615 (error: 0.01225350)
+2025-06-10 12:14:08,356 - INFO - Execution time: 0.7411s
+2025-06-10 12:14:08,356 - INFO - Samples/sec: 13493.91
+2025-06-10 12:14:14,239 - INFO - Starting experiment with config: {'total_samples': 100000, 'algorithm': 'uniform', 'num_workers': 1, 'parallel_strategy': 'thread', 'batch_size': 1000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:14,243 - INFO - PI estimate: 3.14308000 (error: 0.00148735)
+2025-06-10 12:14:14,243 - INFO - Execution time: 0.0036s
+2025-06-10 12:14:14,243 - INFO - Samples/sec: 28207153.44
+2025-06-10 12:14:14,460 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 16, 'parallel_strategy': 'thread', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:14,468 - INFO - PI estimate: 3.14220000 (error: 0.00060735)
+2025-06-10 12:14:14,469 - INFO - Execution time: 0.0071s
+2025-06-10 12:14:14,469 - INFO - Samples/sec: 70182333.72
+2025-06-10 12:14:14,688 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 16, 'parallel_strategy': 'multiprocessing', 'batch_size': 50000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:15,244 - INFO - PI estimate: 3.13868800 (error: 0.00290465)
+2025-06-10 12:14:15,244 - INFO - Execution time: 0.5548s
+2025-06-10 12:14:15,244 - INFO - Samples/sec: 901314.37
+2025-06-10 12:14:15,490 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 2, 'parallel_strategy': 'vectorized', 'batch_size': 100000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:15,561 - INFO - PI estimate: 3.14212400 (error: 0.00053135)
+2025-06-10 12:14:15,561 - INFO - Execution time: 0.0700s
+2025-06-10 12:14:15,561 - INFO - Samples/sec: 71423061.66
+2025-06-10 12:14:15,749 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 16, 'parallel_strategy': 'vectorized', 'batch_size': 50000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:15,758 - INFO - PI estimate: 3.14302400 (error: 0.00143135)
+2025-06-10 12:14:15,758 - INFO - Execution time: 0.0081s
+2025-06-10 12:14:15,758 - INFO - Samples/sec: 61967851.30
+2025-06-10 12:14:15,948 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 2, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:16,182 - INFO - PI estimate: 3.14777600 (error: 0.00618335)
+2025-06-10 12:14:16,182 - INFO - Execution time: 0.2333s
+2025-06-10 12:14:16,182 - INFO - Samples/sec: 2143344.29
+2025-06-10 12:14:16,366 - INFO - Starting experiment with config: {'total_samples': 100000, 'algorithm': 'uniform', 'num_workers': 1, 'parallel_strategy': 'multiprocessing', 'batch_size': 1000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:16,556 - INFO - PI estimate: 3.14308000 (error: 0.00148735)
+2025-06-10 12:14:16,556 - INFO - Execution time: 0.1895s
+2025-06-10 12:14:16,556 - INFO - Samples/sec: 527727.04
+2025-06-10 12:14:16,735 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 1, 'parallel_strategy': 'multiprocessing', 'batch_size': 100000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:17,045 - INFO - PI estimate: 3.14212400 (error: 0.00053135)
+2025-06-10 12:14:17,046 - INFO - Execution time: 0.3091s
+2025-06-10 12:14:17,046 - INFO - Samples/sec: 16176130.89
+2025-06-10 12:14:17,286 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 1, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:17,513 - INFO - PI estimate: 3.14302400 (error: 0.00143135)
+2025-06-10 12:14:17,513 - INFO - Execution time: 0.2266s
+2025-06-10 12:14:17,513 - INFO - Samples/sec: 2207086.51
+2025-06-10 12:14:17,753 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 8, 'parallel_strategy': 'vectorized', 'batch_size': 1000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:17,876 - INFO - PI estimate: 3.14212400 (error: 0.00053135)
+2025-06-10 12:14:17,876 - INFO - Execution time: 0.1215s
+2025-06-10 12:14:17,876 - INFO - Samples/sec: 41165985.35
+2025-06-10 12:14:18,115 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 2, 'parallel_strategy': 'thread', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:18,219 - INFO - PI estimate: 3.14212400 (error: 0.00053135)
+2025-06-10 12:14:18,220 - INFO - Execution time: 0.1037s
+2025-06-10 12:14:18,220 - INFO - Samples/sec: 48237032.93
+2025-06-10 12:14:18,467 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 4, 'parallel_strategy': 'multiprocessing', 'batch_size': 5000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:18,769 - INFO - PI estimate: 3.14234880 (error: 0.00075615)
+2025-06-10 12:14:18,769 - INFO - Execution time: 0.3012s
+2025-06-10 12:14:18,769 - INFO - Samples/sec: 16602773.66
+2025-06-10 12:14:18,985 - INFO - Starting experiment with config: {'total_samples': 1000000, 'algorithm': 'uniform', 'num_workers': 16, 'parallel_strategy': 'vectorized', 'batch_size': 100000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:19,007 - INFO - PI estimate: 3.14178000 (error: 0.00018735)
+2025-06-10 12:14:19,008 - INFO - Execution time: 0.0213s
+2025-06-10 12:14:19,008 - INFO - Samples/sec: 47059930.85
+2025-06-10 12:14:19,195 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 16, 'parallel_strategy': 'thread', 'batch_size': 100000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:19,237 - INFO - PI estimate: 3.14174400 (error: 0.00015135)
+2025-06-10 12:14:19,237 - INFO - Execution time: 0.0418s
+2025-06-10 12:14:19,238 - INFO - Samples/sec: 119526864.82
+2025-06-10 12:14:19,424 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 4, 'parallel_strategy': 'vectorized', 'batch_size': 5000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:19,435 - INFO - PI estimate: 3.14302400 (error: 0.00143135)
+2025-06-10 12:14:19,435 - INFO - Execution time: 0.0105s
+2025-06-10 12:14:19,435 - INFO - Samples/sec: 47567855.80
+2025-06-10 12:14:19,634 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 4, 'parallel_strategy': 'multiprocessing', 'batch_size': 10000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:19,861 - INFO - PI estimate: 3.13904000 (error: 0.00255265)
+2025-06-10 12:14:19,861 - INFO - Execution time: 0.2257s
+2025-06-10 12:14:19,861 - INFO - Samples/sec: 2215376.22
+2025-06-10 12:14:20,081 - INFO - Starting experiment with config: {'total_samples': 100000, 'algorithm': 'uniform', 'num_workers': 8, 'parallel_strategy': 'vectorized', 'batch_size': 50000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:20,084 - INFO - PI estimate: 3.14308000 (error: 0.00148735)
+2025-06-10 12:14:20,084 - INFO - Execution time: 0.0024s
+2025-06-10 12:14:20,084 - INFO - Samples/sec: 42360316.00
+2025-06-10 12:14:20,274 - INFO - Starting experiment with config: {'total_samples': 500000, 'algorithm': 'uniform', 'num_workers': 16, 'parallel_strategy': 'thread', 'batch_size': 100000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:20,280 - INFO - PI estimate: 3.14187200 (error: 0.00027935)
+2025-06-10 12:14:20,280 - INFO - Execution time: 0.0058s
+2025-06-10 12:14:20,280 - INFO - Samples/sec: 86923263.72
+2025-06-10 12:14:20,461 - INFO - Starting experiment with config: {'total_samples': 1000000, 'algorithm': 'uniform', 'num_workers': 8, 'parallel_strategy': 'multiprocessing', 'batch_size': 50000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:20,792 - INFO - PI estimate: 3.13904000 (error: 0.00255265)
+2025-06-10 12:14:20,792 - INFO - Execution time: 0.3312s
+2025-06-10 12:14:20,792 - INFO - Samples/sec: 3019171.44
+2025-06-10 12:14:20,989 - INFO - Starting experiment with config: {'total_samples': 5000000, 'algorithm': 'uniform', 'num_workers': 2, 'parallel_strategy': 'thread', 'batch_size': 1000, 'use_numpy_vectorization': True, 'precision': 'float32', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:21,050 - INFO - PI estimate: 3.14212400 (error: 0.00053135)
+2025-06-10 12:14:21,051 - INFO - Execution time: 0.0599s
+2025-06-10 12:14:21,051 - INFO - Samples/sec: 83427745.73
+2025-06-10 12:14:21,261 - INFO - Starting experiment with config: {'total_samples': 100000, 'algorithm': 'uniform', 'num_workers': 8, 'parallel_strategy': 'vectorized', 'batch_size': 50000, 'use_numpy_vectorization': True, 'precision': 'float64', 'memory_efficient': False, 'target_accuracy': 0.0001, 'max_iterations': 100, 'convergence_window': 10, 'output_dir': 'results', 'log_level': 'INFO', 'save_intermediate': True, 'random_seed': 42, 'profile_performance': True}
+2025-06-10 12:14:21,263 - INFO - PI estimate: 3.14308000 (error: 0.00148735)
+2025-06-10 12:14:21,263 - INFO - Execution time: 0.0021s
+2025-06-10 12:14:21,263 - INFO - Samples/sec: 46648317.78
