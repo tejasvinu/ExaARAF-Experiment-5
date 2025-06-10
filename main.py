@@ -32,32 +32,32 @@ class ExperimentConfig:
     """Configuration for the Monte Carlo PI estimation experiment."""
     
     # Core algorithm parameters
-    total_samples: int = 1_000_000
-    algorithm: str = "uniform"  # uniform, sobol, halton, importance
+    total_samples = 1_000_000
+    algorithm = "uniform"  # uniform, sobol, halton, importance
     
     # Parallelization parameters
-    num_workers: int = mp.cpu_count()
-    parallel_strategy: str = "multiprocessing"  # thread, multiprocessing, vectorized
-    batch_size: int = 10_000
+    num_workers = mp.cpu_count()
+    parallel_strategy = "multiprocessing"  # thread, multiprocessing, vectorized
+    batch_size = 10_000
     
     # Performance optimization parameters
-    use_numpy_vectorization: bool = True
-    precision: str = "float64"  # float32, float64
-    memory_efficient: bool = False
+    use_numpy_vectorization = True
+    precision = "float64"  # float32, float64
+    memory_efficient = False
     
     # Convergence and accuracy parameters
-    target_accuracy: float = 1e-4
-    max_iterations: int = 100
-    convergence_window: int = 10
+    target_accuracy = 1e-4
+    max_iterations = 100
+    convergence_window = 10
     
     # Output and logging
-    output_dir: str = "results"
-    log_level: str = "INFO"
-    save_intermediate: bool = True
+    output_dir = "results"
+    log_level = "INFO"
+    save_intermediate = True
     
     # Experimental parameters for optimization
-    random_seed: int = 42
-    profile_performance: bool = True
+    random_seed = 42
+    profile_performance = True
 
 
 class MonteCarloEstimator:
